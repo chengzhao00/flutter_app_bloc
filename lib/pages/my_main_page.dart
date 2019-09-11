@@ -9,7 +9,7 @@ import 'dynamic/dynamic_page.dart';
 import 'home/home_page.dart';
 import 'main_drawer.dart';
 import 'sytem/system_page.dart';
-
+/// 这是入口页面控制着drawer 和 4个首页
 class MyMainPage extends StatefulWidget {
   @override
   _MyMainPageState createState() => _MyMainPageState();
