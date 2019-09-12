@@ -1,6 +1,6 @@
 # flutter_app_bloc
 
-A new Flutter application.
+玩安卓flutter bloc 模式
 
 ## Getting Started
 
