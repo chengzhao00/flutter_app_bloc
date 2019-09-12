@@ -5,6 +5,8 @@ import 'package:flutter_app_bloc/pages/my_main_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bloc/bloc.dart';
 
+import 'http/dio_utils.dart';
+
 
 void main() async {
   await SystemChrome.setPreferredOrientations([
@@ -12,6 +14,7 @@ void main() async {
     DeviceOrientation.portraitDown
   ]); //设置屏幕方向为纵向
   BlocSupervisor.delegate = GlobalBlocDel(); // 设置delegate
+  await DioUtils.init();
   runAutoSizeApp(MyApp());
 }
 
