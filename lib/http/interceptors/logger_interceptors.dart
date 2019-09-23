@@ -13,7 +13,7 @@ class LoggerInterceptors extends InterceptorsWrapper{
   onRequest(RequestOptions options) {
     if(isDebug){
       print("---------------start request----------");
-      print('uri==${options.uri}');
+      print('uri==${options.uri.toString()}');
       print('method == ${options.method}');
       print('headers:${options.headers.toString()}');
       print('body:${options.data?.toString()}');
@@ -43,7 +43,6 @@ class LoggerInterceptors extends InterceptorsWrapper{
       print('请求异常信息 === ${err.response?.toString()}');
       print('------------end error----------');
     }
-
     return err;
   }
 

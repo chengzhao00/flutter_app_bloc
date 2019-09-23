@@ -7,7 +7,6 @@ import 'package:bloc/bloc.dart';
 
 import 'http/dio_utils.dart';
 
-
 void main() async {
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -34,7 +33,7 @@ class GlobalBlocDel extends BlocDelegate {
   @override
   void onError(Bloc bloc, Object error, StackTrace stacktrace) {
     super.onError(bloc, error, stacktrace);
-    print(error);
+    print('bloc error $error');
   }
 }
 
@@ -46,7 +45,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyMainPage(),
+      home: BlocProvider(
+        builder: (context) {},
+        child: MyMainPage(),
+      ),
     );
   }
 }
