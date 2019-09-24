@@ -28,8 +28,12 @@ class HomeProjectEntity{
   String niceDate;
 
 
+  @JsonKey(name: 'link')
+  String link;
+
+
   HomeProjectEntity(this.title, this.desc, this.envelopePic, this.author,
-      this.collect, this.niceDate);
+      this.collect, this.niceDate,this.link);
 
    factory HomeProjectEntity.fromJson( Map<String, dynamic> json) => _$HomeProjectEntityFromJson(json);
 

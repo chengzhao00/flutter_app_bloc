@@ -20,6 +20,7 @@ class ListItem<T> extends StatelessWidget {
       child: Container(
         height: 160,
         padding: EdgeInsets.only(top: 16, bottom: 16, left: 16, right: 16),
+        decoration: BoxStyles.boxDecoration,
         child: Row(
           children: <Widget>[
             Expanded(

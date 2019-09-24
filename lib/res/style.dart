@@ -14,6 +14,16 @@ class TextStyles {
       TextStyle(fontSize: 14, color: BlocColors.text_normal);
 }
 
+
+class BoxStyles{
+  static BoxDecoration boxDecoration = BoxDecoration(
+    color: Colors.white,
+    border: Border(
+      bottom: BorderSide(width: 1,color: Colors.grey)
+    )
+  );
+}
+
 /// 间距 垂直间距和水平间距
 class Gaps {
   static Widget heightSpace = SizedBox(

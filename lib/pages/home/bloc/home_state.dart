@@ -18,7 +18,7 @@ class HomeInitial extends HomeState{
 }
 
 class HomeBannerState extends HomeState{
-  List<BannerEntity> bannerList;
+  final List<BannerEntity> bannerList;
 
   HomeBannerState({this.bannerList}) : super([bannerList]);
 
@@ -28,8 +28,8 @@ class HomeBannerState extends HomeState{
 
 
 class HomeDataState extends HomeState{
-  List<HomeProjectEntity> homeList;
-  List<BannerEntity> bannerList;
+  final List<HomeProjectEntity> homeList;
+  final List<BannerEntity> bannerList;
 
   HomeDataState({this.homeList,this.bannerList}) :super([homeList,bannerList]);
 
@@ -55,7 +55,8 @@ class HomeLoadingState extends HomeState {
 
 class HomeLoadError extends HomeState{
 
-  Exception exception;
+  final Exception exception;
+
 
   HomeLoadError(this.exception):super([exception]);
 

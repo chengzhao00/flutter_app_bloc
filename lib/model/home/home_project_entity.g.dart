@@ -14,6 +14,7 @@ HomeProjectEntity _$HomeProjectEntityFromJson(Map<String, dynamic> json) {
     json['author'] as String,
     json['collect'] as bool,
     json['niceDate'] as String,
+    json['link'] as String,
   );
 }
 
@@ -25,4 +26,5 @@ Map<String, dynamic> _$HomeProjectEntityToJson(HomeProjectEntity instance) =>
       'author': instance.author,
       'collect': instance.collect,
       'niceDate': instance.niceDate,
+      'link' : instance.link
     };

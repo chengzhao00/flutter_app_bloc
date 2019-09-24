@@ -2,10 +2,20 @@ import 'package:auto_size/auto_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app_bloc/pages/my_main_page.dart';
+import 'package:flutter_app_bloc/pages/web/webview_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bloc/bloc.dart';
 
 import 'http/dio_utils.dart';
+
+///当获取不到context上下文时使用 Globalkey跳转 navigatorKey.currentState.pushNamed(ROUTER_NAME)
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+
+final Map<String, WidgetBuilder> routes = {
+
+//  WebViewPage.ROUTER_NAME: (context) => WebViewPage(),
+
+};
 
 void main() async {
   await SystemChrome.setPreferredOrientations([
@@ -45,6 +55,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      routes: routes,
+      navigatorKey: navigatorKey,
       home: BlocProvider(
         builder: (context) {},
         child: MyMainPage(),
